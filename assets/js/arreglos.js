@@ -102,3 +102,13 @@ console.log(datos);
 
 arr.splice(1, 0, "estudio", "JavaScript"); // Desde el indice 1, elimina 0 elementos y añado 2 desde la posicion 1;
 console.log(arr);
+
+
+
+//¿Que hace la función slice?, de un ejemplo con su nombres
+
+let miNombre = ["Pablo", "Emilio", "Coca", "Gonzalez"];
+
+// Cree un arreglo con los apellidos usando slice
+
+console.log(miNombre.slice(2));
