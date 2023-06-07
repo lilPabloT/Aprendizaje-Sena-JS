@@ -110,5 +110,35 @@ console.log(arr);
 let miNombre = ["Pablo", "Emilio", "Coca", "Gonzalez"];
 
 // Cree un arreglo con los apellidos usando slice
+// Toma el primer valor de standar, pero el ultimo lo toma restandole 1
+console.log(miNombre.slice(2))
+console.log(miNombre.slice(-3, -2));
 
-console.log(miNombre.slice(2));
+
+let nombre = ["Juan", "Mateo"];
+let apellido = ["Morales", "Quintero"];
+
+let nombreCompleto = nombre.concat(apellido, "No", "existe", "en", "la", "vida", "real")
+console.log(nombreCompleto);
+
+
+
+//forEach con un array asociativo
+let ojo = {
+    uno: ["Hola Palo", "Hola Juan", "Hola Tafu"],
+    dos: ["Hola pepe"],
+    tres: ["Hello"]
+}
+
+ojo["uno"].forEach(element => {
+    console.log(element)
+});
+
+// Ejemplo del instructor
+
+["Mateo", "Marcos", "Lucas", "Jose", "Maria", "Juan", "Magdalena"].forEach((item, index, array) => {
+    console.info(`${item} tiene el índice ${index} en ${array}`)
+});
+
+
+// ["Mateo", "Marcos", "Lucas", "Jose", "Maria", "Juan", "Magdalena"].forEach(alert) // Alerta cada elemento
