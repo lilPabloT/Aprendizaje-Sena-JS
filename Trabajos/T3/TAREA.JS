@@ -9,7 +9,12 @@ convertirEnCamel('una-cadena-corta')
 
 function convertirEnCamel( String ){
     let change = String.split(`-`);
+    for ( let i = 0; i< change.length ; i++){
+        if ( i != 0){
+            change[i] = change[i].charAt(0).toUpperCase() + change[i].slice(1)
+        }
+    }
     change = change.join('');
-    console.log(change)
+    return change;
 }
-convertirEnCamel("Hola-Mundo");
+console.log( convertirEnCamel("ya-termine-el-ejercicio"));
