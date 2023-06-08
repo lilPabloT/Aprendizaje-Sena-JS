@@ -65,5 +65,5 @@ let filtrado = function filtrarRango( arr, a, b ){
     return res;
 }
 
-console.log(filtrado( arr, 1, 4).reverse( ));
 console.log( arr );
+console.log(filtrado( arr, 1, 4).reverse( ));
