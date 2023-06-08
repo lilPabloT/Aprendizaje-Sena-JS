@@ -77,7 +77,5 @@ Juan
 `;
 
 let nombresArr = nombres.split(`\n`);
-let fin = [];
-
-fin = nombresArr.filter( item => item != "");
-console.log(fin)
+let fin = nombresArr.filter( item => item != "");
+console.log(fin);
