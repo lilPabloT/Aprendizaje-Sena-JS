@@ -79,3 +79,36 @@ Juan
 let nombresArr = nombres.split(`\n`);
 let fin = nombresArr.filter( item => item != "");
 console.log(fin);
+
+
+// join
+
+let nombresStr = nombresArr.join(';');
+console.log(nombresStr);
+let nombresStrDos= nombresArr.join(' ');
+console.log(nombresStrDos)
+
+
+// Reduce | reduceRiht
+
+// let value = arr.reduce( function ( acumulador, item, index, array ){
+
+// }, inicio) 
+
+numbers = [23, 5, 17, 38, 24];
+let suma = numbers.reduce( ( total, nums ) => total + nums, 0 );
+console.log(suma);
+
+suma = numbers.reduceRight( (total, nums ) => total + nums, 0);
+console.log(suma);
+
+
+console.log('--------------------------------------------------')
+
+
+console.log( typeof {});
+console.log( typeof []);
+
+console.log( Array.isArray({})); // return false
+console.log( Array.isArray([])); // return true
+
