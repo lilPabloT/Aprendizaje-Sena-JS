@@ -6,15 +6,64 @@ convertirEnCamel('una-cadena-corta')
 => unaCadenaCorta
 */
 
+// let change;
+// function convertirEnCamel( String ){
+//     // let change = String.split(`-`);
+//     // for ( let i = 0; i< change.length ; i++){
+//     //     if ( i != 0){
+//     //         change[i] = change[i].charAt(0).toUpperCase() + change[i].slice(1)
+//     //     }
+//     // }
+//     // change = change.join('');
+//     // return change.charAt(0).toLowerCase() + change.slice(1);
+
+//     change = String.split('-');
+//     console.log( change )
+// }
+
+// console.log( convertirEnCamel("Ya-termine-el-ejercicio"));
+
+// for (const iterator of change) {
+//     console.log(iterator)
+// }
 
 function convertirEnCamel( String ){
-    let change = String.split(`-`);
-    for ( let i = 0; i< change.length ; i++){
-        if ( i != 0){
-            change[i] = change[i].charAt(0).toUpperCase() + change[i].slice(1)
+    let change = String.split('-');
+    console.log( change )
+    for ( let i in change ) {
+        if ( change[ i ] != change[ 0 ] ){
+            change[ i ] = change[ i ].charAt( 0 ).toUpperCase( ) + change[ i ].slice( 1 );
         }
     }
-    change = change.join('');
-    return change;
+    change = change.join('');  
+    return change.charAt( 0 ).toLowerCase() + change.slice( 1 );
 }
-console.log( convertirEnCamel("ya-termine-el-ejercicio"));
+
+console.log( convertirEnCamel("una-cadena-corta"))
+
+
+
+/*
+Escribir la funcion filtrarRango( arreglo, a, b ) que obtenga un array, busque los elementos con un valor mayor o igual a 'a' y menor o igual a 'b' y devuelva un arreglo con los resultados
+
+* let arr = [5, 3, 8, 1]
+* let filtrado = filtrarRango( arr, 1, 4 )
+*console.log(  filtrado ); // 3, 1
+*console.log( arr ); // 5, 3, 8, 1
+*/
+
+
+let arr = [5, 3, 8, 1];
+
+let filtrado = function filtrarRango( arr, a, b ){
+    let res = [];
+    for ( const iterator of arr ) {
+        if( arr[ iterator ] >= a && arr[ iterator ] <= b){
+            res.push(arr[ iterator ]);
+        }
+    }
+    return res;
+}
+
+console.log(filtrado( arr, 1, 4).reverse( ));
+console.log( arr );

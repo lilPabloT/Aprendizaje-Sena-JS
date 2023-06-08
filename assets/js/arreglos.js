@@ -146,3 +146,5 @@ ojo["uno"].forEach(element => {
 //indexOf, lasIndexOf, includes => ¿Para que sirven? De una ejemplo de cada uno con su nombre
 
 // Listo, en el apartado Ejemplos/js se encuentra cada ejemplo
+
+
