@@ -6,27 +6,6 @@ convertirEnCamel('una-cadena-corta')
 => unaCadenaCorta
 */
 
-// let change;
-// function convertirEnCamel( String ){
-//     // let change = String.split(`-`);
-//     // for ( let i = 0; i< change.length ; i++){
-//     //     if ( i != 0){
-//     //         change[i] = change[i].charAt(0).toUpperCase() + change[i].slice(1)
-//     //     }
-//     // }
-//     // change = change.join('');
-//     // return change.charAt(0).toLowerCase() + change.slice(1);
-
-//     change = String.split('-');
-//     console.log( change )
-// }
-
-// console.log( convertirEnCamel("Ya-termine-el-ejercicio"));
-
-// for (const iterator of change) {
-//     console.log(iterator)
-// }
-
 function convertirEnCamel( String ){
     let change = String.split('-');
     console.log( change )
