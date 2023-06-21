@@ -62,5 +62,60 @@ console.log( user )
 let [name1, name2, ...rest] = ['Mateo', 'Marcos', 'Lucas', 'Juan'];
 console.log(name1);
 console.log(name2);
-console.log(rest)
-console.log(rest.length)
+
+// ¿Y el resto?
+console.log(rest);
+console.log(rest.length);
+
+let [ name3 = 'Guest', lastName = 'Anonymus' ] = ['Maria']; // Por si llegan datos incompletos
+console.log( name3 );
+console.log( lastName );
+
+
+
+// Desestructuración de objetos
+
+let options = {
+    title: 'Menu',
+    width: 300,
+    height: 500
+};
+
+
+// Reasignacion de nombres solo de las variables no modifica el objeto options
+let { height: h, title, width: w } = options;
+console.log( title );
+console.log( w );
+console.log( h );
+
+
+let option = {
+    title: 'Menu',
+};
+
+let { height = 100, title: t, width = 200 } = option;
+console.log( t );
+console.log( width );
+console.log( height );
+
+
+let { title: T2 } = options;
+console.log( T2 );
+
+
+
+let { title: t2, ...rest2 } = options;
+console.log( rest2.width ) // Accedemos al valor
+
+
+/**
+ * To Do
+ * Cree un objeto llamado user con las propiedades name, years, y van a obtener los valores en variables separadas inclyendo la varibale isAdmin, que si no lo encuntra en el objeto el valor por defeto es False
+ */
+
+let users = {
+    nameU: 'Pablo',
+    years: 3
+}
+let { nameU, years, isAdmin = false} = users;
+console.log(users)
