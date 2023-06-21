@@ -46,3 +46,10 @@ let filtrado = function filtrarRango( arr, a, b ){
 
 console.log( arr );
 console.log(filtrado( arr, 1, 4).reverse( ));
+
+
+let filtracionRango = ( arreglo, a, b) => {
+    return arreglo.filter( element => element >= a && element <= b );
+}
+let filtraado = filtracionRango( arr, 1, 4 );
+console.log(filtraado);
