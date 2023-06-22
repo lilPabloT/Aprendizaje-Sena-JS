@@ -3,25 +3,25 @@
  */
 
 let today = new Date();
-console.log(today);
+console.log(1, today);
 
 today.setHours(0, 0, 0);
-console.log(today);
+console.log(2, today);
 
 let aDay = new Date( 2013, 1, 31);
-console.log(aDay)
+console.log(3, aDay)
 
 aDay.setDate(aDay.getDate() + 2 );
-console.log(aDay); 
+console.log(4, aDay); 
 
 aDay.setSeconds(aDay.getSeconds() + 70 );
-console.log(aDay); 
+console.log(5, aDay); 
 
 aDay.setDate(1);
-console.log(aDay);
+console.log(6, aDay);
 
 aDay.setDate(0);
-console.log(aDay);
+console.log(7, aDay);
 
 console.log('***********************************************************************************')
 
@@ -49,8 +49,6 @@ for ( let i = 0 ; i < 100_000_000 ; i ++ ){
 }
 
 let end = Date.now()
-
-
 console.log( `El tiempo restante es de ${end - date } ms` ) // Milisegundos
 
 
@@ -61,33 +59,36 @@ console.log( `El tiempo restante es de ${end - date } ms` ) // Milisegundos
  * Ejemplo: hoy es 21, si ingresamos la fecha actual junto con 1 el resultado debe ser 20
  */
 
-let getDateAgo = ( date ) => {
-    let now = new Date();
-    let datee = new Date( date);
-    
-    return now.getDate() - datee.getDate();
+const getGateAgo2 = ( date, dias ) => {
+    let now = new Date( date );
+    return now.getDate() - dias;
 }
-console.log( getDateAgo( new Date( 2023, 6, 1 )) );
+
+console.log( getGateAgo2( new Date( 2023, 6, 22), 1))
 
 /**
- * Crear una funcion que calucle la cantidad de segundos que han transcurrido el dia de hoy
+ * Crear una funcion que calcule la cantidad de segundos que han transcurrido el dia de hoy
  */
 
-console.log(new Date());
+function secondsToday(){
+    let hour = new Date().getHours();
+    let min = new Date().getMinutes();
+    let sec = new Date().getSeconds();
+    
+    return hour * 3600000 +  min * 60000 + sec * 1000;
+}
 
-let hour = new Date().getHours();
-let min = new Date().getMinutes();
-let sec = new Date().getSeconds();
+console.log( 'Han pasado', secondsToday() , 'ms');
 
-let todo = hour * 3600000 +  min * 60000 + sec * 1000;
 
-console.log( 'Han pasado', todo , 'ms');
 
 
 /**
- * Crear una funcion quye calcule la cantidad de segundos que flatan para mañana
+ * Crear una funcion que calcule la cantidad de segundos que faltan para mañana
  */
 
-let msDia = 86400000
-let fin = msDia - todo
-console.log('Quedan', fin, 'para que termine el dia')
+function secondsLeft(){
+    let msDia = 86400000
+    return msDia - secondsToday()
+}
+console.log('Quedan', secondsLeft(), 'para que termine el dia')
