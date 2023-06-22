@@ -63,7 +63,6 @@ const getGateAgo2 = ( date, dias ) => {
     let now = new Date( date );
     return now.getDate() - dias;
 }
-
 console.log( getGateAgo2( new Date( 2023, 6, 22), 1))
 
 /**
@@ -71,24 +70,16 @@ console.log( getGateAgo2( new Date( 2023, 6, 22), 1))
  */
 
 function secondsToday(){
-    let hour = new Date().getHours();
-    let min = new Date().getMinutes();
-    let sec = new Date().getSeconds();
-    
-    return hour * 3600000 +  min * 60000 + sec * 1000;
+    let time = new Date();
+    return time.getHours() * 3600 +  time.getMinutes() * 60 + time.getSeconds();
 }
-
-console.log( 'Han pasado', secondsToday() , 'ms');
-
-
-
+console.log( 'Han pasado', secondsToday() , 's');
 
 /**
  * Crear una funcion que calcule la cantidad de segundos que faltan para mañana
  */
 
 function secondsLeft(){
-    let msDia = 86400000
-    return msDia - secondsToday()
+    return 86400 - secondsToday()
 }
 console.log('Quedan', secondsLeft(), 'para que termine el dia')
