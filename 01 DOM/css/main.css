@@ -1,0 +1,19 @@
+tr {
+    border-width: ;
+}
+
+        
+let td1 = tr.firstElementChild;
+td1.firstElementChild.style.backgroundColor = "red";
+
+let td2 = tr.children[1];
+td2.children[1].style.backgroundColor = "red"
+
+let td3 = tr.children[2];
+td3.children[2].style.backgroundColor = "red"
+
+let td4 = tr.children[3];
+td4.children[3].style.backgroundColor = "red"
+
+let td5 = tr.lastElementChild;
+td5.lastElementChild.style.backgroundColor = "red";

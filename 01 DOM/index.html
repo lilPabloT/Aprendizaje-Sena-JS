@@ -1,24 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <div>Begin</div>
+<html>
+    <body>
+        <div>Users:</div>
+        <ul>
+            <li>John</li>
+            <li>Pete</li>
+        </ul>
 
-    <ul>
-        <li>Information</li>
-    </ul>
+        <script>
+            let div = document.body.children[0];
+            div.style.backgroundColor = "red";
 
-    <script>
-        for(let i = 0 ; i < document.body.childNodes.length ; i ++){
-            alert(document.body.childNodes[i]);
-        }
-    </script>
+            let ul = document.body.children[1];
+            ul.style.backgroundColor = "blue";
 
-</body>
+            let li = ul.lastElementChild;
+            li.style.backgroundColor = "green";
+        </script>
+    </body>
 </html>

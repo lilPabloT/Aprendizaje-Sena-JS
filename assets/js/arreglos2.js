@@ -22,7 +22,6 @@ console.log(users.findIndex( user => user.name == "Mateo" && user.id == 5));
 console.log(users.findLastIndex(user => user.name == "Mateo"));
 
 // Filter
-
 let someUsers = users.filter( item => item.name == "Mateo");
 
 someUsers.forEach( user => console.log( user.name));
