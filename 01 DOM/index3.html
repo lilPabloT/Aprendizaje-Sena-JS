@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <ul class="clase1">
+        <li>La</li>
+        <li>prueba</li>
+    </ul>
+    <ul class="clase1 clase2">
+        <li class="clase3">ha</li>
+        <li class="clase3 clase4">pasado</li>
+        <li class="clase3">con</li>
+        <li class="clase3 clase4">éxito</li>
+    </ul>
+
+    <script>
+        // elem.matches(css) -> comprueba si el elemento coincide con el selector pasado y devuelve true o false
+        for( let elem of document.body.children ){
+            if( elem.matches('.clase2')){
+                alert(elem)
+            }
+        }
+        // Selectores que no se suelen utilizar mucho
+        document.body.getElementsByClassName('css');
+        document.body.getElementsByTagName('div');
+        document.body.getElementsByName('name');
+        // Mucho mas potente el actual
+        document.body.querySelectorAll('css')
+    </script>
+</body>
+</html>

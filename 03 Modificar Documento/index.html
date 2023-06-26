@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar el documento</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    
+    <!-- <div class="alert">
+        !Este es un mensaje importante
+    </div> -->
+    <ol id="ol">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+    </ol>
+    
+    <div id="id"></div>
+
+    <script>
+        // Crear un elemento
+        //let divAlert = document.createElement('div');
+        //divAlert.innerHTML = `<strong class='fs-1'>¡Atención!</strong> Este es un mensaje importante`;
+        //divAlert.className = 'alert';
+        //document.body.append(divAlert);
+
+        //let Name = prompt("What's your name")
+        //let bien = document.createElement('div');
+        //bien.innerHTML = `Bienvenido <i>${Name}</i>`;
+        //bien.className = 'alert';
+        //document.body.append(bien)
+        let ol = document.getElementById('ol');
+
+        let antes = document.createElement('li');
+        antes.innerHTML = 'Prepend';
+        ol.prepend(antes);
+
+        let despues = document.createElement('li');
+        despues.innerHTML = 'Despues';
+        ol.append(despues);
+
+        let izquierda = document.createElement('div');
+        izquierda.innerHTML = 'Izquierda (Before)';
+        ol.before(izquierda);
+
+        let derecha = document.createElement('div');
+        derecha.innerHTML = 'Derecha (After)';
+        ol.after(derecha);
+
+
+        //Crear un elemento dentro de 'li' utilizando 'prepend'. ¿Donde se ubica?
+        let otrico = document.createElement('li');
+        otrico.innerHTML = "Holaaa";
+        ol.prepend(otrico);
+
+        // elem.insertAdjacentHTML(where, html)
+        /*
+        * where:
+        * beforebegin - Inserta indemdiatamente antes del elem
+        * afterbegin - Inserta al principio del elem
+        * beforeend - Inserta al final del elem
+        * afterend - Inserta inmediatamnte dsespues del elem
+        */
+
+        let div = document.querySelector('#id');
+        div.insertAdjacentHTML('beforebegin', '<p>BeforeBegin</p>');
+        div.insertAdjacentHTML('afterend', '<p>AfterEnd</p>');
+        div.insertAdjacentHTML('beforeend', '<p>BeforeEnd</p>');
+        div.insertAdjacentHTML('afterbegin', '<p>AfterBegin</p>');
+        </script>
+</body>
+</html>

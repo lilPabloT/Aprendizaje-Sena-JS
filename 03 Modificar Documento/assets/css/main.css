@@ -1,0 +1,12 @@
+.alert{
+    padding: 15px;
+    border: 1px solid #7e9270;
+    border-radius: 5px;
+    color: #3c763d;
+    background-color: #dff0d8;
+    margin-bottom: 10px;
+}
+
+.fs-1{
+    font-size: large;
+}

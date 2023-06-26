@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades del DOM</title>
+</head>
+<body id="page1" algo="no estándar">
+
+    <div id="elem" about="Elefante"></div>
+
+    <input type="text">
+    
+    <script>
+        // body.id = "page1"
+        // Agregar 
+        document.body.myData = {
+            name: "Julio Cesar",
+            title: "Emperador Romano",
+        }
+        console.log(document.body.myData.name);
+
+        // Agregar metodos
+        document.body.getTag = function( ) {
+            console.log(this.tagName);
+        };
+
+        document.body.getTag();
+
+        console.log(document.body.algo);
+
+        // elem.hasAttribute(nombre) - true || false
+        // elem.getAttribute(nombre) - obtiene el valor
+        // elem.setAttribute(nombre) - establece el valor
+        // elem.removeAttribute(nombre) - elimina el atributo
+
+        if( document.body.hasAttribute('algo')){
+            console.log('Contiene el atributo "algo"');
+            console.log(document.body.getAttribute("algo"));
+            document.body.setAttribute("cosas", "pasaron cositas");
+            console.log(document.body.getAttribute("cosas"));
+            document.body.removeAttribute("cosas");
+            console.log(document.body.getAttribute("cosas"));
+        }
+
+        let elem = document.body.querySelector('#elem');
+        console.log(elem.hasAttribute('about'));
+        console.log(elem.getAttribute('about'));
+        elem.setAttribute('data', 123)
+
+        // Averiguar si elem tiene el atributo 'data' y si lo tiene imprimirlo en consola
+
+        if (elem.hasAttribute('data')){
+            console.log(elem.getAttribute('data'))
+        }
+
+        elem.removeAttribute('data');
+        if (elem.hasAttribute('data')){
+            console.log(elem.getAttribute('data'))
+        } else{
+            console.log("No existe el atributo")
+        }
+
+        // Agregar el atributo 'data-text' con el valor 'Texto de prueba'
+        elem.setAttribute('data-text', 'Texto de prueba');
+
+        for ( let atributo of elem.attributes ){
+            console.log(`${atributo.name}: ${atributo.value}`)
+        }
+
+        let input = document.body.querySelector('input');
+        input.setAttribute('id', 'inputId');
+        console.log(input.getAttribute('id'));
+        input.id = 'NuevoId';
+        console.log(input.getAttribute('id'));
+
+        input.setAttribute('value', 'txt de prueba');
+        console.log(input.getAttribute('value'));
+        console.log(input.value);
+
+        input.value = 'Otro texto';
+        console.log(input.value)
+
+        input.setAttribute('value', 'txt final');
+        console.log(input.getAttribute('value'));
+    </script>
+</body>
+</html>
