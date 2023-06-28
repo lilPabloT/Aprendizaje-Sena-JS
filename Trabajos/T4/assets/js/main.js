@@ -22,7 +22,7 @@ contenedor.className = 'container';
 contenedor.style.display = "flex";
 contenedor.style.width = "1800px";
 contenedor.style.height = "570px";
-contenedor.style.margin = "10px"
+contenedor.style.marginTop = "10px"
 document.body.append(contenedor);
 
 
