@@ -18,4 +18,4 @@ document.body.classList.toggle('txt-black');
 
 setInterval(( ) => {
     document.body.classList.toggle('txt-black')
-}, 500)
+}, 500);
